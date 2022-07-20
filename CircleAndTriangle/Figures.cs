@@ -5,9 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CircleAndTriangle
-{
+{    
     public class Figures
     {
+        public string Query = $@"SELECT        Category.NameCategory, Product.NameProduct
+FROM            Category INNER JOIN
+                         ProductCategory ON Category.IdCategory = ProductCategory.IdCategory RIGHT JOIN
+                         Product ON ProductCategory.IdProduct = Product.IdProduct";
         public static string Area(double s1, double s2, double s3, double r)
         {
             string Rez = "";
